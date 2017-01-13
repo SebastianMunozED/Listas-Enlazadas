@@ -32,7 +32,7 @@ public class SlinkedList {
 	    }
 	
 	
-	public void InsertarAlFinal(Nodo s){
+	public void InsertarFinal(Nodo s){
 		if(head == null){
 			head = s;
 			size = 1;
@@ -48,22 +48,21 @@ public class SlinkedList {
 		}
 	}
 	
-	public void InsertarAlInicio(Nodo s){
-		if(head==null){
-			head= s;
-			size=1;
+	public void InsertarInicio(Nodo s){
+		if(head == null){
+			head = s;
+			size = 1;
 			}
 		else{
-			Nodo aux=head;
+			Nodo aux = head;
 			s.setEnlace(aux);
 			head = s;
-			size = size+1;
+			size = size + 1;
 		}	
 	}
 	public boolean buscar(String dato){
         Nodo aux = head;
         boolean existe = false;
-        //Recorre la lista 
         while(aux != null && existe != true){
             if (dato == aux.getDato()){
                 existe = true;
@@ -78,18 +77,16 @@ public class SlinkedList {
 	public int getSize(){
 	        return size;
 	    }
-	
-	
+		
 	@Override
 	public String toString() {
-		String lista = "";
-		Nodo aux = head;
+		String lista="";
+		Nodo aux=head;
 		lista += aux.getDato()+"\n";
-		while(aux.getEnlace() != null){
+		while(aux.getEnlace()!= null){
 			lista += aux.getEnlace().getDato()+"\n";
 			aux = aux.getEnlace();
 		}
 		return lista;
 	}
-	
 }
