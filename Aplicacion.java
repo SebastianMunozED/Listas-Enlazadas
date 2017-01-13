@@ -10,19 +10,19 @@ public class Aplicacion {
 		Nodo d = new Nodo("Esteban",null);
         
 		SlinkedList lista = new SlinkedList();
-		lista.InsertarAlFinal(a);
-		lista.InsertarAlFinal(b);
-		lista.InsertarAlInicio(c);
-		lista.InsertarAlInicio(d);
+		lista.InsertarInicio(a);
+		lista.InsertarFinal(b);
+		lista.InsertarInicio(c);
+		lista.InsertarFinal(d);
 		System.out.println(lista.toString());
 		
-	System.out.print("La lista esta vacia:\n");
+		System.out.print("La lista esta vacia:\n");
         System.out.println(lista.esVacia());
         
-	System.out.print("\nTamaño: ");
+		System.out.print("\nTamaño: ");
         System.out.println(lista.getSize());
 		
-	System.out.println("\nExiste: Maria");
+		System.out.println("\nExiste: Maria");
         System.out.println(lista.buscar("Maria"));
         
         System.out.println("\nExiste: Andres");
