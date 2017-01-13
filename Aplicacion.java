@@ -15,17 +15,14 @@ public class Aplicacion {
 		lista.InsertarAlInicio(w);
 		System.out.println(lista.toString());
 		
-		System.out.print("Tamaño: ");
+		System.out.print("TamaÃ±o: ");
         System.out.println(lista.getSize());
 		
 		System.out.println("\nExiste: Maria");
         System.out.println(lista.buscar("Maria"));
         
         System.out.println("\nExiste: Andres");
-        System.out.println(lista.buscar("Andres"));
-        
-        
-		
+        System.out.println(lista.buscar("Andres"));	
 	}
 
 }
