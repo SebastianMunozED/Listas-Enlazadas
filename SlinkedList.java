@@ -1,7 +1,5 @@
 package epn.com;
 
-import java.io.IOException;
-
 public class SlinkedList {
 
 	protected Nodo head;
@@ -27,7 +25,7 @@ public class SlinkedList {
 	            return cont;
 	        
 	        } else {
-	            throw new Exception("Valor inexistente en la lista.");
+	            throw new Exception("Dato no existe en la lista.");
 	        }
 	    }
 	
@@ -40,8 +38,8 @@ public class SlinkedList {
 		else{
 			Nodo aux;
 			aux= head;
-			while(aux.getEnlace()!=null){
-				aux=aux.getEnlace();
+			while(aux.getEnlace()!= null){
+				aux = aux.getEnlace();
 			}
 			aux.setEnlace(s);
 			size = size + 1;
@@ -77,11 +75,12 @@ public class SlinkedList {
 	public int getSize(){
 	        return size;
 	    }
-		
+	
+	
 	@Override
 	public String toString() {
-		String lista="";
-		Nodo aux=head;
+		String lista = "";
+		Nodo aux = head;
 		lista += aux.getDato()+"\n";
 		while(aux.getEnlace()!= null){
 			lista += aux.getEnlace().getDato()+"\n";
